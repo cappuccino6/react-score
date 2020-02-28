@@ -1,6 +1,6 @@
 import React from 'react'
-import Star from './star'
-import 'style-loader!css-loader!./stars.css'
+import Star from './Star'
+import 'style-loader!css-loader!./Stars.css'
 
 export default ({
   ...props,

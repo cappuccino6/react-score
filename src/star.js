@@ -1,6 +1,6 @@
 import React from 'react'
 import { calcScore } from './util'
-import 'style-loader!css-loader!./star.css'
+import 'style-loader!css-loader!./Star.css'
 
 export default ({
   char,
