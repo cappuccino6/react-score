@@ -1,0 +1,18 @@
+.react-score-star-wrapper {
+  position: relative;
+  display: block;
+}
+
+.react-score-star-1 {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.react-score-star-2 {
+  position: absolute;
+  right: 0;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.react-score-star-checked {
+  
+}

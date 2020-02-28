@@ -1,0 +1,44 @@
+{
+  "name": "react-score",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run build-example && webpack-dev-server --hot --online",
+    "build-example": "webpack -p --config=webpack.config.js",
+    "clean": "rimraf example/dist && rimraf lib",
+    "build": "npm run clean && cross-env NODE_ENV=production && BABEL_ENV=esm babel src --out-dir lib --copy-files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cappuccino6/react-score.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cappuccino6/react-score/issues"
+  },
+  "homepage": "https://github.com/cappuccino6/react-score#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "css-loader": "^3.4.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "style-loader": "^1.1.3"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.8.4",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "7.1.5",
+    "cross-env": "^7.0.0",
+    "path": "^0.12.7",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
