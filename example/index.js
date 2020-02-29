@@ -34,6 +34,23 @@ const App = () => {
           char='❤'
         />
       </p>
+      <p>
+        <ReactScore
+          value={4.5}
+          size={60}
+          spacing={20}
+          char='H'
+        />
+      </p>
+      <p>
+        <ReactScore
+          count={3}
+          value={1}
+          size={30}
+          spacing={30}
+          char='S'
+        />
+      </p>
       <p>@copyright reserved</p>
     </div>
   )
