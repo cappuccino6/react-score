@@ -1,18 +1,27 @@
 .react-score-star-wrapper {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  will-change: transform;
+  transition: transform 0.2s;
+}
+
+.react-score-star-scale {
+  transform: scale(1.1);
 }
 
 .react-score-star-1 {
+  /* position: absolute; */
   clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  transition: all 0.3s;
+  color: red;
 }
 
 .react-score-star-2 {
   position: absolute;
   right: 0;
   clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-}
-
-.react-score-star-checked {
-  
+  transition: all 0.3s;
+  color: blue;
 }

@@ -1,34 +1,65 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import Stars from './Stars'
-import { calcScore } from './util'
+import { calcScore, getElementTarget } from './util'
 import 'style-loader!css-loader!./ReactScore.css'
 
 class ReactScore extends React.Component {
-  
-  get rootClass() {
-    const { className } = this.props
-    if (className) {
-      return `react-score-root, ${className}`
-    } else {
-      return 'react-score-root'
+  constructor(props) {
+    super(props)
+    const value = calcScore(this.props.value)
+    this.state = {
+      value,
+      finalScore: value
     }
   }
 
-  state = {
-    value: calcScore(this.props.value) || 0
+  getComputedValue = e => {
+    // 向上冒泡找到含有 data-value 属性的元素
+    const target = getElementTarget(e.target, 'value')
+    if (!target) return
+    const { value, score } = target.dataset
+    const { half } = this.props
+    return half ? Number(value) : Number(score)
   }
 
-  handleClick = () => {
+  handleMouseOver = e => {
+    const newValue = this.getComputedValue(e)
+    if (newValue) {
+      this.setState({
+        value: newValue
+      })
+    }
+  }
+
+  handleMouseLeave = () => {
     this.setState({
-      value: this.state.value - 1
+      value: this.state.finalScore
     })
   }
 
+  handleMouseDown = e => {
+    const newValue = this.getComputedValue(e)
+    if (newValue) {
+      this.setState({
+        finalScore: newValue
+      })
+    }
+  }
+
   render () {
+    const { className } = this.props
     const { value } = this.state
     return (
-      <div className={this.rootClass} onClick={this.handleClick}>
+      <div 
+        className={
+          cx('react-score-root-good', 'react-score-root', className)
+        }
+        onMouseOver={this.handleMouseOver}
+        onMouseLeave={this.handleMouseLeave}
+        onMouseDown={this.handleMouseDown}
+      >
         <Stars
           {...this.props}
           value={value}
