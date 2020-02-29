@@ -40,11 +40,13 @@ class ReactScore extends React.Component {
   }
 
   handleMouseDown = e => {
+    const { onChange } = this.props
     const newValue = this.getComputedValue(e)
     if (newValue) {
       this.setState({
         finalScore: newValue
       })
+      onChange && onChange(newValue)
     }
   }
 

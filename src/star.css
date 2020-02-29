@@ -7,12 +7,11 @@
   transition: transform 0.2s;
 }
 
-.react-score-star-scale {
-  transform: scale(1.1);
+.react-score-star-wrapper:hover {
+  transform: scale(1.08);
 }
 
 .react-score-star-1 {
-  /* position: absolute; */
   clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
   transition: all 0.3s;
   color: red;
