@@ -1,8 +1,9 @@
 {
   "name": "react-score",
   "version": "0.0.2",
-  "description": "",
-  "main": "index.js",
+  "description": "a react score lib",
+  "keywords": ["react", "score", "rate", "reviews"],
+  "main": "lib/index.js",
   "scripts": {
     "dev": "npm run build-example && webpack-dev-server --hot --online",
     "build-example": "webpack -p --config=webpack.config.js",
@@ -13,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/cappuccino6/react-score.git"
   },
-  "author": "",
+  "author": "zhengyuanbing",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cappuccino6/react-score/issues"
