@@ -57,4 +57,3 @@ export default class Star extends React.Component {
     )
   }
 }
-
