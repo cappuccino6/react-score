@@ -18,10 +18,12 @@ const App = () => {
       </p>
       <p>
         <ReactScore
+          count={10}
           value={2}
           size={35}
           spacing={2}
           half={false}
+          color2='#fadb14'
         />
       </p>
       <p>
