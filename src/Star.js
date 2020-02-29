@@ -30,8 +30,6 @@ export default class Star extends React.Component {
           ...this.style,
           marginLeft: `${index > 0 ? spacing : 0}px`
         }}
-        onMouseOver={this.handleMouseOver}
-        onMouseLeave={this.handleMouseLeave}
       >
         <span
           style={{
