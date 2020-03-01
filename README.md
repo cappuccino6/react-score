@@ -30,9 +30,10 @@ props list:
 | `color1` | Color of inactive character | `rgba(253, 84, 9, 0.2)` | string |
 | `color2` | Color of selected or active star | `rgb(253, 84, 9)` | string |
 | `size` | Size of stars (in px) | `30` | string |
+| `spacing` | Letter spacing of stars (in px) | `10` | string |
 | `edit` | Should you be able to select rating or just see rating (for reusability) | `true` | boolean |
 | `half` | Should component use half stars, if not the decimal part will be dropped otherwise normal algebra rools will apply to round to half stars | `true` | boolean
-| `onChange()` | Will be invoked any time the rating is changed | `() => {}` | function |
+| `onChange` | Will be invoked any time the rating is changed | `function() {}` | function |
 
 ### Help improve the component
 ###### Build on your machine:
