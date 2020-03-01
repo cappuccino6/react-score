@@ -14,6 +14,7 @@ const App = () => {
         <ReactScore
           value={3.5}
           onChange={handleChange}
+          edit={false}
         />
       </p>
       <p>

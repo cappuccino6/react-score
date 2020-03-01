@@ -20,12 +20,15 @@ export default class Star extends React.Component {
       color1,
       color2,
       index,
-      half
+      half,
+      edit
     } = this.props
 
     return (
       <span 
-        className={cx('react-score-star-wrapper')}
+        className={cx('react-score-star-wrapper', {
+          'react-score-star-scale': edit
+        })}
         style={{
           ...this.style,
           marginLeft: `${index > 0 ? spacing : 0}px`
