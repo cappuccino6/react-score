@@ -61,6 +61,7 @@ class ReactScore extends React.Component {
         onMouseOver={this.handleMouseOver}
         onMouseLeave={this.handleMouseLeave}
         onMouseDown={this.handleMouseDown}
+        onClick={this.handleMouseDown}
       >
         <Stars
           {...this.props}
